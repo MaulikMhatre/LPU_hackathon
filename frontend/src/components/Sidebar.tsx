@@ -3,7 +3,7 @@
 "use client";
 
 import React from 'react';
-import { Home, BarChart3, Clock, Layers, User, BookOpenText } from 'lucide-react';
+import { Home, BarChart3, Clock, Layers, User, BookOpenText, GraduationCap } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { LogoutButton } from './LogoutButton'; 
@@ -16,6 +16,9 @@ const navItems = [
     { name: 'Exams Schedule', href: '/schedule', icon: Clock },
     { name: 'Leaderboards', href: '/rank', icon: Layers },
     { name: 'Resources', href: '/resources', icon: BookOpenText },
+    { name: 'Adaptive Practice', href: '/adaptive-practice', icon: BookOpenText },
+    { name: 'Personalized Tutor', href: '/personalized-tutor', icon: GraduationCap },
+    { name: 'Performance Booster', href: '/performance-booster', icon: BarChart3 },
     { name: 'Profile', href: '/profile', icon: User },
 ];
 

@@ -22,10 +22,16 @@ def create_app():
     from routes.auth import auth_bp
     from routes.dashboard import dashboard_bp
     from routes.assignments import assignments_bp
+    from routes.boosters import boosters_bp
+    from routes.adaptive_practice import adaptive_practice_bp
+    from routes.personalized_tutor import personalized_tutor_bp
     
     app.register_blueprint(auth_bp, url_prefix='/api/auth')
     app.register_blueprint(dashboard_bp, url_prefix='/api/dashboard')
     app.register_blueprint(assignments_bp, url_prefix='/api/assignments')
+    app.register_blueprint(boosters_bp, url_prefix='/api/boosters')
+    app.register_blueprint(adaptive_practice_bp, url_prefix='')
+    app.register_blueprint(personalized_tutor_bp, url_prefix='')
     
     @app.route('/api/health', methods=['GET'])
     def health_check():
